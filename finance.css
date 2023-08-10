@@ -1,0 +1,38 @@
+*{
+    border: 0;
+    font-size: 16px;
+    
+}
+body{
+    background-color: #333;
+    color: white;
+    
+}
+
+.box{
+    margin: 10px;
+    padding: 10px;
+    background-color: #555;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+button{
+    padding: 10px;
+    background-color: bisque;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    margin: 10px;
+    transition: all 0.5s;
+  
+}
+
+button:hover{
+    background-color: rgb(247, 167, 69);
+    color: black;
+    transform: scale(1.1);
+    
+   
+    
+}
