@@ -4,9 +4,10 @@
     
 }
 body{
+    padding-top: 2rem;
     background-color: #111;
     color: white;
-    height: 100vmin;
+    min-height: 100vmin;
     position: relative;
     text-align: center;
     
@@ -23,7 +24,7 @@ body{
 }
 button{
     padding: 10px;
-    background-color: bisque;
+    background-color: red;
     font-size: 1.1rem;
     border-radius: 5px;
     margin: 10px;
@@ -32,17 +33,17 @@ button{
 }
 
 button:hover{
-    background-color: rgb(247, 167, 69);
+    background-color: rgba(255, 0, 0, 0.499);
     color: black;
-    transform: scale(1.1);
-    
-   
-    
+    transform: scale(1.1); 
 }
 footer{
-    position:fixed;
-    bottom: 0;
-    
-    right: 40%;
-    font-size: 0.5rem;
+    margin-top: 10rem;
+    font-size: 0.2rem;
+}
+a{
+    color: rgba(255, 0, 0, 0.59);
+}
+a:hover,a:focus,a:active{
+    color: red;
 }
