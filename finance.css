@@ -4,8 +4,11 @@
     
 }
 body{
-    background-color: #333;
+    background-color: #111;
     color: white;
+    height: 100vmin;
+    position: relative;
+    text-align: center;
     
 }
 
@@ -35,4 +38,11 @@ button:hover{
     
    
     
+}
+footer{
+    position:fixed;
+    bottom: 0;
+    
+    right: 40%;
+    font-size: 0.5rem;
 }
