@@ -33,9 +33,14 @@ function A(){
     let n = document.getElementById("n-a").value;
     let i = document.getElementById("i-a").value;
     let sv = document.getElementById("sv-a").value;
+    i*=1;
+    pv*=1;
+    sv*=1;
+    n*=1;
+let x = 1+i;
+let powx = Math.pow(x,n);
 
-    let A = i*(pv-(sv/Math.pow((1+i),n)))/1-(1/Math.pow((1+i),n));
-    console.log(A);
+    let A = i*(pv-(sv/powx))/(1-(1/powx));
     let ans = document.createElement('p');
     ans.innerText = 'A = '+A;
     parent.appendChild(ans)
