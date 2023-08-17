@@ -5,65 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Time value of money</title>
   <link rel="stylesheet" href="./finance.css">
-  <!-- <script src="./finance.js"></script> -->
+  <script src="./finance.js"></script>
 </head>
 
 <body>
     <header>
-        <h2>Time value of money</h3>
+        <nav>
+            <h2>Time value of money</h3>
+<button onclick="presentValue()" referance="present-value" class="shti">Calculate A</button>
+<button onclick="futureValue()">Calculate FV</button>
+        </nav>
     </header>
-    <p>Present Value: &nbsp;</p>
-    <input type="text" id="pv" placeholder="PV" class="box" required>
-    <br>
-    <p>Number of Years: &nbsp;</p>
-    <input type="text" id="n" placeholder="n" class="box" required>
-    <br>
-    <p>Rate of interest: &nbsp;</p>
-    <input type="text" id="i" placeholder="i" class="box" required>
-    <br>
-    <p>Compounded: &nbsp;</p>
-    <input type="text" id="m" class="box" placeholder="m(optional)">
-<br>
-    <button onclick="FV()">Calculate</button>
+    <main>
+        <section class="tutorial">
+            <p>To get started, Select the value you want to calculate. (optional) inputs are 0 by default. After finishing all the inputs, press the calculate button bellow and the answer will show up.</p>
+        </section>
+        <section id="future-value" class="">
+            <p>Present Value: &nbsp;</p>
+            <input type="text" id="pv" placeholder="PV" class="box" required>
+            <br>
+            <p>Number of Years: &nbsp;</p>
+            <input type="text" id="n" placeholder="n" class="box" required>
+            <br>
+            <p>Rate of interest: &nbsp;</p>
+            <input type="text" id="i" placeholder="i (%)" class="box" required>
+            <br>
+            <p>Compounded(m): &nbsp;</p>
+            <input type="text" id="m" class="box" placeholder="(optional)">
+            <br>
+            <button onclick="FV()">Calculate</button>
+            <div class="container">
+            </div>                
+        </section>
+
+        <section id="present-value">
+            <p>Present Value(PV): &nbsp;</p>
+            <input type="number" id="pv-a" placeholder="PV" class="box" required>
+            <br>
+            <p>Number of Years(n): &nbsp;</p>
+            <input type="number" id="n-a" placeholder="n" class="box" required>
+            <br>
+            <p>Rate of interest(i): &nbsp;</p>
+            <input type="number" id="i-a" placeholder="i (%)" class="box" required>
+            <br>
+            <p>Salvage Value(S.V): &nbsp;</p>
+            <input type="text" id="sv-a" class="box" placeholder="S.V(optional)">
+            <br>
+            <button onclick="A()">Calculate</button>
 
 
-<div class="container">
-
-</div>
+            <div class="containerPV">
+            </div>
+        </section>
+    </main>
 
 <footer>
     <p>Developed by <a href="https://www.facebook.com/shahriyerhossain.fahim/">@SH_Fahim</a></p>
 </footer>
-
-<script>
-    function FV(){
-    let pv = document.getElementById("pv").value;
-    let n = document.getElementById("n").value;
-    let i = document.getElementById("i").value;
-    let m = document.getElementById("m").value;
-
-    let fv = pv*Math.pow((1+(i/100)),n);
-
-    if(typeof m !== 'string'){
-        console.log("With 'm' value:" );
-        fv = pv*Math.pow((1+(i/(100*m))),n*m);
-    }
-    console.log("Future value(FV) is :" +" "+fv);
-    
-    let ans = document.createElement('p');
-    ans.textContent = fv;
-
-    let parent = document.querySelector('.container');
-    parent.appendChild(ans);
-
-}
-
-
-function PV(){
-
-}
-
-
-</script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 
 body{
-    padding-top: 2rem;
+    padding-top: 1rem;
     background-color: #111;
     color: white;
     min-height: 100vmin;
@@ -22,6 +22,7 @@ input{
     border: none;
 }
 
+
 button{
     padding: 10px;
     border: 1px solid red;
@@ -32,7 +33,9 @@ button{
     transition: all 0.5s;
     color: white;
     margin-top: 1rem;
-  
+}
+nav > button{
+    padding:5px 15px;
 }
 
 button:hover{
@@ -45,4 +48,17 @@ footer{
 }
 a{
     color: red;
+}
+.hidden{
+    display: none;
+}
+section{
+    display: none;
+}
+.tutorial{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    line-height: 1.5rem;
 }
